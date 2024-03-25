@@ -1,0 +1,61 @@
+ <html>
+    <body>
+        <Script>
+        
+            let stock={
+                fruits :["banana","grapes","strawberry"],
+               liquid :["water","ice"],
+                 holder :["cone","cup","stick"],
+                 toppings : ["chocolate","nuts"]
+            };
+            setTimeout(() => {
+                console.log('hello')  
+            }, 0000);
+
+            let order = (fruit_need,call_production) => {
+                setTimeout(() => {
+                    console.log(`${stock.fruits[fruit_need]}`); 
+                 
+
+                call_production();
+
+             }  , 3000);  
+            };
+            let production = () => {
+
+                setTimeout(() => {
+                    console.log("production is started");
+                
+                    setTimeout(() => {
+                        console.log("fruits chopped");   
+                    
+                  setTimeout(()=>{
+                  console.log(
+ `${stock.liquid[0]} and ${stock.liquid[1]} has taken`) ;
+
+                setTimeout(() => {
+                    console.log("start machine");
+                setTimeout(() => {
+                 console.log(`ice cream on ${stock.holder[0]}` );
+
+                setTimeout(() => {
+                   console.log(`${stock.toppings[1]} is added`);
+
+                   setTimeout(() => {
+                     console.log('ice cream is ready');
+                   }, 1000);
+                }, 1000);
+                }, 1000); 
+                }, 2000); 
+                    } , 1000); 
+                
+          
+                },2000); 
+            },0000);
+
+            };
+           
+           order(1,production);
+ </Script>
+    </body>
+</html>

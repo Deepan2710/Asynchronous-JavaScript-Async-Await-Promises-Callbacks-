@@ -1,0 +1,54 @@
+<html>
+    <body>
+        <Script>
+           
+            let stock={
+                fruits :["banana","grapes","strawberry"],
+               liquid :["water","ice"],
+                 holder :["cone","cup","stick"],
+                 toppings : ["chocolate","nuts"]
+            };
+            let is_true=true;
+
+          function duration(ms) {
+            return new Promise( (resolve,reject) =>{
+                if(is_true){
+                    setTimeout(resolve,ms)
+                }
+                else {
+                    reject(console.log("shop is closed"));
+                }
+            } ) 
+          }  
+          
+          async function kitc(){
+            try{
+                await duration(2000);
+                console.log(`${stock.fruits[0]}`);
+                await duration(0000);
+                console.log("producton started");
+                await duration(2000);
+                console.log(`cut the fruit ${stock.fruits[0]}`)
+                await duration(1000)
+                console.log(`Add ${stock.liquid[0]} and ${stock.liquid[1]}`)
+                await duration(1000)
+                console.log("start the machine");
+                await duration(2000)
+                console.log(`select ${stock.holder[0]}`)
+                await duration(3000)
+                console.log(`choose ${stock.toppings[1]}`)
+                await duration(2000)
+                console.log("serve the Ice Cream")
+            }
+            catch(error) {
+                console.log("customer left",error)
+            }
+            finally{
+                console.log("day ended")
+            }
+          } 
+
+          kitc();
+</Script>
+</body>
+</html>
